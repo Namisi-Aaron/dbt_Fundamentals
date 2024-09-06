@@ -1,0 +1,154 @@
+[0m10:54:31.610129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef7a79362a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef7a75a89e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef7a8597a70>]}
+
+
+============================== 10:54:31.612029 | f7e712a1-6a7c-4d96-8aad-a5bd32a0a702 ==============================
+[0m10:54:31.612029 [info ] [MainThread]: Running with dbt=1.8.6
+[0m10:54:31.612435 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/namisi/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt init new_project', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:54:31.617331 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/home/namisi/.dbt')}
+[0m10:54:31.617635 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m10:54:31.618868 [debug] [MainThread]: Starter project path: /home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m10:54:31.638130 [info ] [MainThread]: 
+Your new dbt project "new_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:54:31.638595 [info ] [MainThread]: Setting up your profile.
+[0m10:55:09.152440 [error] [MainThread]: Encountered an error:
+
+[0m10:55:09.153984 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/cli/main.py", line 470, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/task/init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m10:55:09.155102 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 37.578995, "process_user_time": 0.975901, "process_kernel_time": 0.073916, "process_mem_max_rss": "107992", "process_in_blocks": "2240", "process_out_blocks": "80", "command_success": false}
+[0m10:55:09.155559 [debug] [MainThread]: Command `dbt init` failed at 10:55:09.155476 after 37.58 seconds
+[0m10:55:09.155923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef7a6712a80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef7a4bb12e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ef7a62163c0>]}
+[0m10:55:09.156277 [debug] [MainThread]: Flushing usage events
+[0m10:55:38.163377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7032e12750a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7032e1d7cfe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7032e12ec6e0>]}
+
+
+============================== 10:55:38.165460 | f3f8af26-6229-48cf-bf0a-44e213c0ea44 ==============================
+[0m10:55:38.165460 [info ] [MainThread]: Running with dbt=1.8.6
+[0m10:55:38.165997 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/namisi/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init jaffle_shop', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:55:38.171631 [debug] [MainThread]: Starter project path: /home/namisi/Documents/dbt_Fundamentals/venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m10:55:38.173766 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:55:38.174144 [info ] [MainThread]: Setting up your profile.
+[0m11:06:17.393099 [info ] [MainThread]: Profile jaffle_shop written to /home/namisi/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:06:17.395826 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 639.26807, "process_user_time": 1.000808, "process_kernel_time": 0.074985, "process_mem_max_rss": "107992", "process_out_blocks": "72", "process_in_blocks": "0"}
+[0m11:06:17.396329 [debug] [MainThread]: Command `dbt init` succeeded at 11:06:17.396242 after 639.27 seconds
+[0m11:06:17.396749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7032e0a92900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7032df2e5970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7032e28b1610>]}
+[0m11:06:17.397176 [debug] [MainThread]: Flushing usage events
+[0m11:11:46.259106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6573c13ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6573c11730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6574015940>]}
+
+
+============================== 11:11:46.260946 | 6b614592-bd3c-43e5-8540-2252686161ab ==============================
+[0m11:11:46.260946 [info ] [MainThread]: Running with dbt=1.8.6
+[0m11:11:46.261516 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/namisi/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:11:46.266611 [info ] [MainThread]: dbt version: 1.8.6
+[0m11:11:46.266988 [info ] [MainThread]: python version: 3.12.3
+[0m11:11:46.267291 [info ] [MainThread]: python path: /home/namisi/Documents/dbt_Fundamentals/venv/bin/python3
+[0m11:11:46.267627 [info ] [MainThread]: os info: Linux-6.8.0-41-generic-x86_64-with-glibc2.39
+[0m11:11:46.442286 [info ] [MainThread]: Using profiles dir at /home/namisi/.dbt
+[0m11:11:46.442638 [info ] [MainThread]: Using profiles.yml file at /home/namisi/.dbt/profiles.yml
+[0m11:11:46.442923 [info ] [MainThread]: Using dbt_project.yml file at /home/namisi/Documents/dbt_Fundamentals/dbt_project.yml
+[0m11:11:46.443285 [info ] [MainThread]: adapter type: snowflake
+[0m11:11:46.443562 [info ] [MainThread]: adapter version: 1.8.3
+[0m11:11:46.443851 [info ] [MainThread]: Configuration:
+[0m11:11:46.444119 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:11:46.444386 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m11:11:46.444652 [info ] [MainThread]: Required dependencies:
+[0m11:11:46.444942 [debug] [MainThread]: Executing "git --help"
+[0m11:11:46.446259 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:11:46.446676 [debug] [MainThread]: STDERR: "b''"
+[0m11:11:46.446988 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:11:46.447261 [info ] [MainThread]: Connection:
+[0m11:11:46.447543 [info ] [MainThread]:   account: kerrtvg-xp05473
+[0m11:11:46.447826 [info ] [MainThread]:   user: NAMISIAARON
+[0m11:11:46.448093 [info ] [MainThread]:   database: ANALYTICS
+[0m11:11:46.448356 [info ] [MainThread]:   warehouse: TRANSFORMING
+[0m11:11:46.448656 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m11:11:46.448932 [info ] [MainThread]:   schema: DBT_ANAMISI
+[0m11:11:46.449199 [info ] [MainThread]:   authenticator: None
+[0m11:11:46.449461 [info ] [MainThread]:   oauth_client_id: None
+[0m11:11:46.449728 [info ] [MainThread]:   query_tag: None
+[0m11:11:46.449993 [info ] [MainThread]:   client_session_keep_alive: False
+[0m11:11:46.450256 [info ] [MainThread]:   host: None
+[0m11:11:46.450521 [info ] [MainThread]:   port: None
+[0m11:11:46.450800 [info ] [MainThread]:   proxy_host: None
+[0m11:11:46.451080 [info ] [MainThread]:   proxy_port: None
+[0m11:11:46.451344 [info ] [MainThread]:   protocol: None
+[0m11:11:46.451606 [info ] [MainThread]:   connect_retries: 1
+[0m11:11:46.451883 [info ] [MainThread]:   connect_timeout: None
+[0m11:11:46.452147 [info ] [MainThread]:   retry_on_database_errors: False
+[0m11:11:46.452408 [info ] [MainThread]:   retry_all: False
+[0m11:11:46.452670 [info ] [MainThread]:   insecure_mode: False
+[0m11:11:46.452937 [info ] [MainThread]:   reuse_connections: None
+[0m11:11:46.453343 [info ] [MainThread]: Registered adapter: snowflake=1.8.3
+[0m11:11:46.540712 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m11:11:46.541333 [debug] [MainThread]: Using snowflake connection "debug"
+[0m11:11:46.541609 [debug] [MainThread]: On debug: select 1 as id
+[0m11:11:46.541873 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:11:49.992567 [debug] [MainThread]: SQL status: SUCCESS 1 in 3.451 seconds
+[0m11:11:49.993780 [debug] [MainThread]: On debug: Close
+[0m11:11:50.657662 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:11:50.659089 [info ] [MainThread]: [31m1 check failed:[0m
+[0m11:11:50.659419 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/namisi/Documents/dbt_Fundamentals/dbt_project.yml> not found
+
+[0m11:11:50.660092 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 4.4351077, "process_user_time": 1.163413, "process_kernel_time": 0.067371, "process_mem_max_rss": "114956", "process_in_blocks": "64", "process_out_blocks": "1056", "command_success": false}
+[0m11:11:50.660528 [debug] [MainThread]: Command `dbt debug` failed at 11:11:50.660445 after 4.44 seconds
+[0m11:11:50.660864 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m11:11:50.661148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6573b8cbc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6572b97da0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a6574015370>]}
+[0m11:11:50.661458 [debug] [MainThread]: Flushing usage events
