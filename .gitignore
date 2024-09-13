@@ -1,6 +1,6 @@
 
-jaffle_shop/target/
-jaffle_shop/dbt_packages/
+target/
+dbt_packages/
 logs/
 venv/
 .vscode/
